@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --Outfit: 'Outfit', sans-serif;
+}
+
+::selection {
+    color: var(--mainBG);
+    background-color: var(--cyan);
+}
+
+body {
+    background-color: var(--mainBG);
+    height: 100vh;
+    min-width: 375px;
+    max-width: 1980px;
+    overflow-x: hidden;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    padding: 1.5em;
+    font-family: var(--Outfit);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: var(--cardBG);
+    border-radius: 15px;
+    padding: 1.5em;
+    max-width: 350px;
+    box-shadow: hsla(217, 54%, 11%, 0.5); 0px 7px 29px 0px;
+}
+
+.image {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 22px;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: var(--cyan);
+}
+
+p {
+    color: var(--blue);
+    font-weight: 300;
+}
+
+.card > p {
+    line-height: 1.75;
+    margin-bottom: 1.25em;
+}
+
+.nft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.eth, .time, .profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.eth p {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.profile {
+    border-top: 1px solid var(--line);
+    padding-top: 1em;
+    gap: 1em;
+}
+
+.profile img {
+    width: 40px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+span {
+    color: var(--white);
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+span:hover {
+    color: var(--cyan);
+}
